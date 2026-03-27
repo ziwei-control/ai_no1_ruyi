@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# CoPaw CLI wrapper — delegates to the uv-managed environment.
+set -euo pipefail
+
+COPAW_HOME="${COPAW_HOME:-$HOME/.copaw}"
+REAL_BIN="$COPAW_HOME/venv/bin/copaw"
+
+if [ ! -x "$REAL_BIN" ]; then
+    echo "Error: CoPaw environment not found at $COPAW_HOME/venv" >&2
+    echo "Please reinstall: curl -fsSL <install-url> | bash" >&2
+    exit 1
+fi
+
+exec "$REAL_BIN" "$@"

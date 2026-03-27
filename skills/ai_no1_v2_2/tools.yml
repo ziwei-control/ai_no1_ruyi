@@ -1,0 +1,11 @@
+tools:
+  - name: execute_shell_command
+    desc: 执行 shell 命令（由 NLP 层生成的标准指令调用）
+  - name: read_file
+    desc: 读取脚本内容（用于 Shebang 提取、依赖分析）
+  - name: write_file
+    desc: 生成测试报告 + 追加 MEMORY.md / memory/2026-03-05.md
+  - name: memory_search
+    desc: 检索过往测试记录，避免重复错误
+  - name: get_current_time
+    desc: 获取当前时间，用于报告时间戳

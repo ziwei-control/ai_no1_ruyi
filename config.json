@@ -1,0 +1,105 @@
+{
+  "channels": {
+    "imessage": {
+      "enabled": false,
+      "bot_prefix": "",
+      "filter_tool_messages": false,
+      "db_path": "~/Library/Messages/chat.db",
+      "poll_sec": 1.0
+    },
+    "discord": {
+      "enabled": false,
+      "bot_prefix": "",
+      "filter_tool_messages": false,
+      "bot_token": "",
+      "http_proxy": "",
+      "http_proxy_auth": ""
+    },
+    "dingtalk": {
+      "enabled": true,
+      "bot_prefix": "@pawbot",
+      "filter_tool_messages": false,
+      "client_id": "ding2qkgr90jmj2bbvkt",
+      "client_secret": "Pxr7hKBnx1uilRxDL_cYahvDl_qtdJ5vyXSGO-LQfWFeq507H0xj9w8Ruc70jSG3",
+      "media_dir": "~/.copaw/media"
+    },
+    "feishu": {
+      "enabled": false,
+      "bot_prefix": "",
+      "filter_tool_messages": false,
+      "app_id": "",
+      "app_secret": "",
+      "encrypt_key": "",
+      "verification_token": "",
+      "media_dir": "~/.copaw/media"
+    },
+    "qq": {
+      "enabled": false,
+      "bot_prefix": "",
+      "filter_tool_messages": false,
+      "app_id": "",
+      "client_secret": ""
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_prefix": "@pawbot",
+      "filter_tool_messages": false,
+      "bot_token": "8113049638:AAGQH2pEgtMT_5VJdcJqG87LnX3b_KdTYhk",
+      "http_proxy": "",
+      "http_proxy_auth": "",
+      "show_typing": null
+    },
+    "console": {
+      "enabled": true,
+      "bot_prefix": "",
+      "filter_tool_messages": false
+    }
+  },
+  "mcp": {
+    "clients": {
+      "tavily_search": {
+        "name": "tavily_mcp",
+        "description": "",
+        "enabled": true,
+        "transport": "stdio",
+        "url": "",
+        "headers": {},
+        "command": "npx",
+        "args": [
+          "-y",
+          "tavily-mcp@latest"
+        ],
+        "env": {
+          "TAVILY_API_KEY": ""
+        },
+        "cwd": ""
+      }
+    }
+  },
+  "last_api": {
+    "host": "0.0.0.0",
+    "port": 8088
+  },
+  "agents": {
+    "defaults": {
+      "heartbeat": {
+        "enabled": true,
+        "every": "10m",
+        "target": "main",
+        "activeHours": null
+      }
+    },
+    "running": {
+      "max_iters": 30,
+      "max_input_length": 131072
+    },
+    "language": "zh",
+    "installed_md_files_language": "zh"
+  },
+  "last_dispatch": {
+    "channel": "dingtalk",
+    "user_id": "Spanda#C0ek",
+    "session_id": "IVDjSxg="
+  },
+  "show_tool_details": true
+}

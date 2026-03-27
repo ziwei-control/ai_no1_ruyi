@@ -1,0 +1,13 @@
+tools:
+  - name: execute_shell_command
+    desc: 执行 shell 命令并返回输出，用于测试工具实际行为
+  - name: read_file
+    desc: 读取日志/报告文件，用于错误根因分析
+  - name: write_file
+    desc: 写入测试报告和新 Skill 文件
+  - name: edit_file
+    desc: 更新已有文件（如 memory）
+  - name: memory_search
+    desc: 检索过往测试记录，避免重复失败
+  - name: get_current_time
+    desc: 获取当前时间戳用于报告命名

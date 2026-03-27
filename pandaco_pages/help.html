@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心 - PandaCo 吃了么</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.5em; color: #2c3e50; margin-bottom: 30px; border-bottom: 3px solid #9b59b6; padding-bottom: 15px; }
+        h2 { font-size: 1.8em; color: #8e44ad; margin: 40px 0 20px; padding-left: 15px; border-left: 4px solid #9b59b6; }
+        h3 { font-size: 1.3em; color: #34495e; margin: 25px 0 15px; }
+        h4 { font-size: 1.1em; color: #555; margin: 20px 0 10px; }
+        p { margin: 15px 0; text-align: justify; }
+        .section { background: white; padding: 30px; border-radius: 10px; margin: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .highlight { background: #f5eef8; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #9b59b6; }
+        .tip { background: #e8f8f5; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .warning { background: #fef5e7; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f39c12; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin: 10px 0; }
+        .faq-item { margin: 20px 0; padding: 20px; background: #fafafa; border-radius: 8px; }
+        .faq-item q { font-weight: bold; color: #8e44ad; display: block; margin-bottom: 10px; }
+        .faq-item a { color: #8e44ad; }
+        .steps { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; }
+        .steps ol { margin-left: 20px; }
+        .toc { background: #f5eef8; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .toc h3 { margin-bottom: 15px; }
+        .toc ul { list-style: none; margin: 0; padding: 0; }
+        .toc li { margin: 8px 0; }
+        .toc a { color: #8e44ad; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .search-box { background: white; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; }
+        .search-box input { padding: 12px 20px; width: 70%; border: 2px solid #ddd; border-radius: 25px; font-size: 16px; }
+        .search-box button { padding: 12px 30px; background: #9b59b6; color: white; border: none; border-radius: 25px; cursor: pointer; margin-left: 10px; }
+        .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0; }
+        .quick-link { background: white; padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: transform 0.2s; }
+        .quick-link:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .quick-link span { font-size: 2em; display: block; margin-bottom: 10px; }
+        code { background: #f0f0f0; padding: 2px 8px; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❓ 帮助中心</h1>
+        
+        <div class="search-box">
+            <input type="text" placeholder="搜索问题...">
+            <button>搜索</button>
+        </div>
+        
+        <div class="quick-links">
+            <div class="quick-link">
+                <span>📅</span>
+                <strong>签到问题</strong>
+            </div>
+            <div class="quick-link">
+                <span>🔐</span>
+                <strong>账户安全</strong>
+            </div>
+            <div class="quick-link">
+                <span>📊</span>
+                <strong>数据统计</strong>
+            </div>
+            <div class="quick-link">
+                <span>🔔</span>
+                <strong>提醒设置</strong>
+            </div>
+            <div class="quick-link">
+                <span>📱</span>
+                <strong>多端同步</strong>
+            </div>
+            <div class="quick-link">
+                <span>🎵</span>
+                <strong>音乐服务</strong>
+            </div>
+        </div>
+        
+        <div class="toc">
+            <h3>📑 目录导航</h3>
+            <ul>
+                <li><a href="#quick-start">一、快速入门</a></li>
+                <li><a href="#checkin">二、签到功能</a></li>
+                <li><a href="#account">三、账户管理</a></li>
+                <li><a href="#stats">四、数据统计</a></li>
+                <li><a href="#reminder">五、提醒功能</a></li>
+                <li><a href="#sync">六、多端同步</a></li>
+                <li><a href="#achievement">七、成就系统</a></li>
+                <li><a href="#music">八、音乐服务</a></li>
+                <li><a href="#faq">九、常见问题</a></li>
+                <li><a href="#feedback">十、意见反馈</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 id="quick-start">一、快速入门</h2>
+            
+            <h3>1.1 注册账户</h3>
+            <div class="steps">
+                <ol>
+                    <li>访问 <a href="https://pandaco.asia/">pandaco.asia</a></li>
+                    <li>点击右上角"免费注册"按钮</li>
+                    <li>填写用户名、密码等信息</li>
+                    <li>点击"注册"完成账户创建</li>
+                </ol>
+            </div>
+            
+            <h3>1.2 首次签到</h3>
+            <div class="steps">
+                <ol>
+                    <li>登录账户后，点击"立即开始"或签到按钮</li>
+                    <li>系统记录签到时间和日期</li>
+                    <li>获得当日签到成功提示</li>
+                    <li>查看签到统计和成就进度</li>
+                </ol>
+            </div>
+            
+            <div class="tip">
+                <strong>💡 小贴士：</strong>每天签到可获得积分，连续签到有额外奖励！
+            </div>
+            
+            <h3>1.3 功能概览</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f5eef8;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">功能</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">说明</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">📅 每日签到</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">一键签到，记录每一天</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">📊 数据统计</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">可视化图表展示签到数据</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🔔 智能提醒</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">自定义提醒时间</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🏆 成就系统</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">解锁成就徽章</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 id="checkin">二、签到功能</h2>
+            
+            <h3>2.1 如何签到</h3>
+            <ul>
+                <li><strong>Web端</strong>：登录后点击首页签到按钮</li>
+                <li><strong>移动端</strong>：打开网页版，点击签到</li>
+            </ul>
+            
+            <h3>2.2 签到规则</h3>
+            <ul>
+                <li>每天只能签到一次</li>
+                <li>签到时间以服务器时间为准</li>
+                <li>连续签到可获得额外奖励</li>
+                <li>断签后连续签到天数重置</li>
+            </ul>
+            
+            <div class="warning">
+                <strong>注意：</strong>连续签到断签后将从1重新开始计算，请记得每天签到！
+            </div>
+            
+            <h3>2.3 签到记录</h3>
+            <p>您可以在个人中心查看：</p>
+            <ul>
+                <li>历史签到记录</li>
+                <li>累计签到天数</li>
+                <li>最长连续签到天数</li>
+                <li>本月签到日历</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 id="account">三、账户管理</h2>
+            
+            <h3>3.1 修改个人信息</h3>
+            <div class="steps">
+                <ol>
+                    <li>登录账户</li>
+                    <li>进入"个人中心"或"设置"</li>
+                    <li>修改需要更新的信息</li>
+                    <li>点击"保存"确认修改</li>
+                </ol>
+            </div>
+            
+            <h3>3.2 修改密码</h3>
+            <div class="steps">
+                <ol>
+                    <li>进入"设置" → "账户安全"</li>
+                    <li>点击"修改密码"</li>
+                    <li>输入原密码和新密码</li>
+                    <li>点击"确认"完成修改</li>
+                </ol>
+            </div>
+            
+            <h3>3.3 忘记密码</h3>
+            <ul>
+                <li>点击登录页"忘记密钥"按钮</li>
+                <li>输入注册邮箱或用户名</li>
+                <li>系统发送重置链接到邮箱</li>
+                <li>通过链接设置新密码</li>
+            </ul>
+            
+            <h3>3.4 注销账户</h3>
+            <p>如需注销账户，请在账户设置中选择"注销账户"。注销后：</p>
+            <ul>
+                <li>账户数据将被删除</li>
+                <li>签到记录无法恢复</li>
+                <li>成就和徽章将被清空</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 id="stats">四、数据统计</h2>
+            
+            <h3>4.1 统计内容</h3>
+            <ul>
+                <li><strong>累计签到次数</strong>：总签到天数统计</li>
+                <li><strong>连续签到天数</strong>：当前连续签到次数</li>
+                <li><strong>最长连续签到</strong>：历史最高连续记录</li>
+                <li><strong>周/月报告</strong>：自动生成的统计报告</li>
+            </ul>
+            
+            <h3>4.2 数据可视化</h3>
+            <p>系统提供多种图表展示：</p>
+            <ul>
+                <li>签到日历视图</li>
+                <li>签到趋势图</li>
+                <li>时间分布图</li>
+                <li>成就进度图</li>
+            </ul>
+            
+            <h3>4.3 导出数据</h3>
+            <p>您可以在设置中导出个人签到数据（CSV格式），用于个人存档或分析。</p>
+        </div>
+
+        <div class="section">
+            <h2 id="reminder">五、提醒功能</h2>
+            
+            <h3>5.1 设置提醒</h3>
+            <div class="steps">
+                <ol>
+                    <li>进入"设置" → "提醒设置"</li>
+                    <li>开启提醒开关</li>
+                    <li>设置提醒时间</li>
+                    <li>选择提醒方式（邮件/站内通知）</li>
+                    <li>保存设置</li>
+                </ol>
+            </div>
+            
+            <h3>5.2 提醒方式</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f5eef8;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">方式</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">说明</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">条件</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">📧 邮件提醒</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">发送提醒邮件</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">需绑定邮箱</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🔔 站内通知</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">登录时显示提醒</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">默认开启</td>
+                </tr>
+            </table>
+            
+            <h3>5.3 关闭提醒</h3>
+            <p>如不需提醒，可在提醒设置中关闭。关闭后将不会收到签到提醒。</p>
+        </div>
+
+        <div class="section">
+            <h2 id="sync">六、多端同步</h2>
+            
+            <h3>6.1 支持平台</h3>
+            <ul>
+                <li><strong>Web浏览器</strong>：支持Chrome、Firefox、Safari等主流浏览器</li>
+                <li><strong>移动浏览器</strong>：iOS Safari、Android Chrome等</li>
+            </ul>
+            
+            <h3>6.2 数据同步</h3>
+            <p>您的签到数据会自动云端同步：</p>
+            <ul>
+                <li>在任何设备签到，其他设备实时更新</li>
+                <li>数据加密存储，安全可靠</li>
+                <li>支持离线查看最近记录</li>
+            </ul>
+            
+            <h3>6.3 同步问题排查</h3>
+            <p>如遇同步问题，请尝试：</p>
+            <ol>
+                <li>刷新页面</li>
+                <li>清除浏览器缓存</li>
+                <li>重新登录账户</li>
+                <li>检查网络连接</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2 id="achievement">七、成就系统</h2>
+            
+            <h3>7.1 成就类型</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f5eef8;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">成就名称</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">解锁条件</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">奖励</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🌟 初来乍到</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">首次签到</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">10积分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🔥 坚持7天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">连续签到7天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">50积分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">💪 坚持30天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">连续签到30天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">200积分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">🏆 百日达人</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">累计签到100天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">500积分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">👑 签到王者</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">连续签到365天</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">专属徽章</td>
+                </tr>
+            </table>
+            
+            <h3>7.2 查看成就</h3>
+            <p>在"个人中心" → "我的成就"中可查看已获得和待解锁的成就。</p>
+        </div>
+
+        <div class="section">
+            <h2 id="music">八、音乐服务</h2>
+            
+            <h3>8.1 音乐功能</h3>
+            <p>PandaCo 提供AI生成音乐播放服务：</p>
+            <ul>
+                <li>在线播放AI创作音乐</li>
+                <li>播放列表管理</li>
+                <li>后台播放支持</li>
+            </ul>
+            
+            <h3>8.2 当前曲目</h3>
+            <p>平台提供多首AI生成音乐，包括：</p>
+            <ul>
+                <li>声声啊韵 - 豆包AI</li>
+                <li>AI驿站之歌 - 豆包AI</li>
+                <li>OpenClaw 服务 - 豆包AI</li>
+                <li>极地奇遇 - 豆包AI</li>
+                <li>更多音乐持续更新中...</li>
+            </ul>
+            
+            <h3>8.3 播放操作</h3>
+            <ul>
+                <li>点击歌曲名称开始播放</li>
+                <li>使用播放控制按钮控制播放</li>
+                <li>支持音量调节和进度拖动</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 id="faq">九、常见问题（FAQ）</h2>
+            
+            <div class="faq-item">
+                <q>Q: 签到时间怎么计算？</q>
+                <p>A: 签到以服务器时间为准，每日只能签到一次。新的一天从凌晨00:00开始计算。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 忘记签到怎么办？可以补签吗？</q>
+                <p>A: 目前暂不支持补签功能。忘记签到会导致连续签到天数重置，请记得每日签到或设置提醒。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 签到数据会丢失吗？</q>
+                <p>A: 您的数据会安全存储在云端服务器，不会丢失。如遇数据问题，请联系客服处理。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 如何更改用户名？</q>
+                <p>A: 用户名注册后暂不支持修改。如需更改，请联系客服或注册新账户。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 账户被盗怎么办？</q>
+                <p>A: 请立即通过"忘记密码"功能重置密码，如无法重置，请联系客服进行账户申诉。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 积分有什么用？</q>
+                <p>A: 积分用于展示您的签到成就，未来将开放积分兑换功能。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 多人可以使用同一账户吗？</q>
+                <p>A: 账户仅限个人使用，不建议共享。多人使用可能导致签到数据混乱。</p>
+            </div>
+            
+            <div class="faq-item">
+                <q>Q: 服务收费吗？</q>
+                <p>A: 基础签到功能免费使用。未来可能推出高级功能订阅服务。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 id="feedback">十、意见反馈</h2>
+            
+            <h3>10.1 反馈渠道</h3>
+            <ul>
+                <li>登录后在帮助中心提交工单</li>
+                <li>通过官方网站留言</li>
+            </ul>
+            
+            <h3>10.2 反馈内容</h3>
+            <p>提交反馈时，请包含以下信息以便我们更好地帮助您：</p>
+            <ul>
+                <li>问题描述</li>
+                <li>出现问题的时间</li>
+                <li>使用的设备和浏览器</li>
+                <li>截图（如有）</li>
+            </ul>
+            
+            <h3>10.3 响应时间</h3>
+            <p>我们将在收到反馈后1-3个工作日内予以回复。</p>
+            
+            <div class="highlight">
+                <strong>💡 感谢您的支持！</strong><br>
+                您的每一条建议都是我们前进的动力。我们将持续改进，为您提供更好的服务体验。
+            </div>
+        </div>
+        
+        <p style="text-align: center; color: #999; margin-top: 40px;">
+            还没解决问题？<a href="#" style="color: #9b59b6;">联系客服</a><br><br>
+            © 2025-2026 PandaCo 熊猫科技 版权所有 | 吉ICP备2026000792号-1
+        </p>
+    </div>
+</body>
+</html>

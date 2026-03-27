@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 智能体软件安装服务 - 风险告知书</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18pt;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        h2.subtitle {
+            text-align: center;
+            font-size: 14pt;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            color: #555;
+            font-weight: normal;
+        }
+        h3 {
+            font-size: 13pt;
+            color: #1a5490;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            text-align: justify;
+            margin: 8px 0;
+        }
+        .indent {
+            text-indent: 2em;
+        }
+        .risk-item {
+            margin: 10px 0;
+            padding-left: 1em;
+        }
+        .risk-title {
+            font-weight: bold;
+            color: #c00;
+        }
+        .sign-line {
+            margin: 30px 0;
+            padding: 15px 0;
+            border-top: 1px dashed #ccc;
+        }
+        .sign-row {
+            margin: 15px 0;
+        }
+        ul.checklist {
+            list-style: none;
+            padding: 0;
+        }
+        ul.checklist li {
+            margin: 8px 0;
+            padding: 8px 10px;
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #333;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .sub-item {
+            margin-left: 2em;
+            color: #444;
+        }
+        .emphasis {
+            background: #fffbe6;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI 智能体软件（OpenClaw 等）安装服务</h1>
+    <h2 class="subtitle">风险告知书 + 免责协议 + 安全配置清单</h2>
+
+    <h3>一、风险告知书</h3>
+    
+    <p><strong>致：____________（客户名称）</strong></p>
+    
+    <p class="indent">本人/本单位自愿委托服务方安装 AI 智能体类软件（包括但不限于 OpenClaw、Moltbot、Qwen 等具备系统控制、自动执行能力的 AI 程序）。服务方已充分、清晰告知以下风险，本人/本单位已完全知晓、理解并自愿承担全部相关风险：</p>
+
+    <div class="risk-item">
+        <p><span class="risk-title">1. 系统高权限风险</span><br>
+        AI 软件需获取系统文件读写、执行命令、调用 API、联网、安装程序等高权限，存在被恶意利用、远程控制、植入木马、挖矿、篡改系统的风险。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">2. 数据泄露与丢失风险</span><br>
+        AI 可访问本地文件、账号密码、API 密钥、业务数据、个人信息等，若因配置不当、插件不安全、网络攻击等原因，可能导致数据泄露、丢失、被窃取。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">3. 第三方插件与模型风险</span><br>
+        第三方插件、模型、脚本可能存在恶意代码、后门、漏洞，可能造成设备损坏、账号被盗、API 盗刷、隐私泄露。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">4. Prompt 注入与 AI 失控风险</span><br>
+        AI 可能被恶意指令诱导，执行删除文件、修改配置、外传数据、违规操作等非预期行为，造成不可控后果。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">5. API 密钥泄露与费用失控风险</span><br>
+        API Key 若保管不当，可能被盗用产生高额算力/调用费用，相关费用及责任由客户自行承担。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">6. 漏洞与网络攻击风险</span><br>
+        此类软件属于高风险工具，存在公开漏洞，易遭受黑客攻击、入侵、exploit 利用，导致系统瘫痪或数据受损。</p>
+    </div>
+
+    <div class="risk-item">
+        <p><span class="risk-title">7. 客户自身使用不当风险</span><br>
+        客户自行修改配置、使用弱密码、对公网开放端口、随意安装不明插件、违规运行等行为引发的一切后果，均由客户自行承担。</p>
+    </div>
+
+    <div class="sign-line">
+        <p><strong>客户确认：</strong></p>
+        <p class="indent">本人已认真阅读并完全理解上述全部风险，自愿安装该类 AI 软件，并承担由此产生的一切后果。服务方仅提供软件安装、环境部署、基础配置等技术服务，<span class="emphasis">不承担软件本身缺陷、攻击、使用不当造成的任何损失</span>。</p>
+        <div class="sign-row">
+            <p>客户签字/盖章：____________　　　　　　　　　日期：______年____月____日</p>
+        </div>
+    </div>
+
+    <h3>二、免责协议</h3>
+
+    <p>1. 服务方仅提供 <span class="emphasis">软件安装、环境调试、基础配置</span> 技术服务，不提供任何安全性、稳定性、商用担保。</p>
+    
+    <p>2. 客户明确知晓 AI 智能体类软件属于 <span class="emphasis">高权限、高风险工具</span>，并非标准化安全产品，存在固有安全风险。</p>
+    
+    <p>3. 因以下原因导致的任何直接或间接损失，服务方均不承担法律责任、赔偿责任：</p>
+    <p class="sub-item">• 软件本身漏洞、缺陷、兼容性问题；</p>
+    <p class="sub-item">• 第三方插件、模型、工具带来的恶意代码或安全问题；</p>
+    <p class="sub-item">• 客户自行修改配置、使用弱密码、对公网开放端口、违规操作；</p>
+    <p class="sub-item">• 黑客攻击、病毒入侵、Prompt 注入、网络劫持；</p>
+    <p class="sub-item">• 数据丢失、密钥泄露、API 费用超支；</p>
+    <p class="sub-item">• 客户业务系统、硬件、网络环境自身问题。</p>
+
+    <p>4. 服务方已尽到充分风险告知义务，客户自愿接受并承担全部风险。</p>
+    <p>5. 本协议自签字之日起生效，一式两份，双方各执一份。</p>
+
+    <div class="sign-line">
+        <div class="sign-row">
+            <p>客户签字/盖章：____________　　　　　　　　　服务方签字：____________</p>
+        </div>
+        <div class="sign-row">
+            <p>日期：______年____月____日</p>
+        </div>
+    </div>
+
+    <h3>三、安装安全配置 Checklist</h3>
+    
+    <p>服务方已完成以下基础安全配置（勾选确认）：</p>
+
+    <ul class="checklist">
+        <li><span class="checkbox"></span>仅允许本地访问（127.0.0.1），禁止对公网开放端口</li>
+        <li><span class="checkbox"></span>启用强密码/密钥认证</li>
+        <li><span class="checkbox"></span>关闭自动安装第三方插件、自动执行高危命令</li>
+        <li><span class="checkbox"></span>避免以 root/管理员权限长期运行</li>
+        <li><span class="checkbox"></span>API Key 加密存储，不记录在日志、截图、明文配置</li>
+        <li><span class="checkbox"></span>关闭不必要的联网权限与自动更新</li>
+        <li><span class="checkbox"></span>限制 AI 访问敏感目录（桌面、文档、浏览器数据等）</li>
+        <li><span class="checkbox"></span>开启操作日志，便于追溯</li>
+        <li><span class="checkbox"></span>告知客户不随意安装来源不明插件</li>
+        <li><span class="checkbox"></span>告知客户定期更新、修改密码、备份数据</li>
+    </ul>
+
+    <div class="sign-line" style="margin-top: 40px;">
+        <div class="sign-row">
+            <p>服务方确认签字：____________　　　　　　　　　日期：______年____月____日</p>
+        </div>
+        <div class="sign-row">
+            <p>客户确认签字：____________　　　　　　　　　日期：______年____月____日</p>
+        </div>
+    </div>
+
+</body>
+</html>

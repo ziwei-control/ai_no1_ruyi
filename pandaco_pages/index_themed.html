@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="warm">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9f3">
+    <title>🍎 吃了么 - 智能签到管理系统</title>
+    <link rel="stylesheet" href="themes.css">
+    <style>
+        /* 页面特定样式 */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-color);
+            z-index: 100;
+        }
+        
+        .music-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: var(--accent-light);
+            color: var(--accent-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .testimonials {
+            padding: 60px 40px;
+            background: var(--bg-secondary);
+        }
+        
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin: 15px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-section {
+            padding: 80px 40px;
+            text-align: center;
+            background: var(--gradient-hero);
+        }
+        
+        /* 主题切换器位置调整 */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--bg-card);
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .theme-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-right: 5px;
+        }
+        
+        /* 特殊效果 - 仅赛博朋克主题 */
+        [data-theme="cyberpunk"] .glitch-text {
+            position: relative;
+        }
+        
+        [data-theme="cyberpunk"] .glitch-text::before,
+        [data-theme="cyberpunk"] .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        [data-theme="cyberpunk"] .glitch-text::before {
+            color: #ff00ff;
+            animation: glitch-1 0.3s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        }
+        
+        [data-theme="cyberpunk"] .glitch-text::after {
+            color: #00ffff;
+            animation: glitch-2 0.3s infinite;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        }
+        
+        @keyframes glitch-1 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+        }
+        
+        @keyframes glitch-2 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(-2px, 2px); }
+            60% { transform: translate(1px, -1px); }
+            80% { transform: translate(-1px, 1px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">🍎 吃了么</div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#features">功能</a></li>
+                <li><a href="#music">音乐</a></li>
+                <li><a href="#stats">数据</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+            <!-- 主题切换器会自动插入到这里 -->
+            <div class="auth-buttons">
+                <button class="btn-secondary" style="padding: 10px 20px; margin-left: 20px;">登录</button>
+                <button class="btn-primary" style="padding: 10px 20px;">免费注册</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title glitch-text" data-text="让签到变得 简单有趣">让签到变得 简单有趣</h1>
+            <p class="hero-subtitle">智能签到管理系统，记录每一天的健康生活。<br>支持多平台提醒，数据统计一目了然。</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">立即开始</button>
+                <button class="btn-secondary">了解更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" style="padding: 80px 40px;">
+        <h2 class="section-title">核心功能</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 50px;">简单、高效、智能的签到体验</p>
+        
+        <div class="features-grid">
+            <div class="card">
+                <div class="feature-icon">📅</div>
+                <h3>每日签到</h3>
+                <p style="color: var(--text-secondary);">一键签到，记录您的每一天。支持连续签到统计，养成良好习惯。</p>
+            </div>
+            
+            <div class="card">
+                <div class="feature-icon">📊</div>
+                <h3>数据统计</h3>
+                <p style="color: var(--text-secondary);">可视化图表展示签到数据，周报月报自动生成，一目了然。</p>
+            </div>
+            
+            <div class="card">
+                <div class="feature-icon">🔔</div>
+                <h3>智能提醒</h3>
+                <p style="color: var(--text-secondary);">自定义提醒时间，支持邮件、短信多种通知方式，再也不会忘记。</p>
+            </div>
+            
+            <div class="card">
+                <div class="feature-icon">🔒</div>
+                <h3>安全可靠</h3>
+                <p style="color: var(--text-secondary);">数据加密存储，多层安全防护，您的隐私安全是我们的首要任务。</p>
+            </div>
+            
+            <div class="card">
+                <div class="feature-icon">📱</div>
+                <h3>多端同步</h3>
+                <p style="color: var(--text-secondary);">支持Web、iOS、Android多平台，数据实时同步，随时随地签到。</p>
+            </div>
+            
+            <div class="card">
+                <div class="feature-icon">🏆</div>
+                <h3>成就系统</h3>
+                <p style="color: var(--text-secondary);">完成签到任务解锁成就徽章，让签到更有动力和乐趣。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section id="stats" class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>10K+</h3>
+                <p>活跃用户</p>
+            </div>
+            <div class="stat-item">
+                <h3>100M+</h3>
+                <p>累计签到</p>
+            </div>
+            <div class="stat-item">
+                <h3>365</h3>
+                <p>稳定运行(天)</p>
+            </div>
+            <div class="stat-item">
+                <h3>99.9%</h3>
+                <p>服务可用率</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 区域 -->
+    <section class="cta-section">
+        <h2 class="section-title">准备好开始了吗？</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">加入我们，开启您的健康签到之旅</p>
+        <button class="btn-primary">免费注册，立即体验</button>
+    </section>
+
+    <!-- 用户评价 -->
+    <section class="testimonials">
+        <h2 class="section-title">用户怎么说</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 50px;">来自真实用户的反馈</p>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto;">
+            <div class="testimonial-card" style="flex: 1; min-width: 280px; max-width: 320px;">
+                <p class="testimonial-text">"用了三个月，每天签到已经成为习惯。界面简洁，提醒功能很贴心！"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨‍💻</div>
+                    <div>
+                        <strong>张先生</strong>
+                        <p style="font-size: 12px; color: var(--text-muted);">连续签到90天</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" style="flex: 1; min-width: 280px; max-width: 320px;">
+                <p class="testimonial-text">"数据统计功能太棒了，可以清楚看到自己的签到记录，很有成就感！"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩‍🎨</div>
+                    <div>
+                        <strong>李女士</strong>
+                        <p style="font-size: 12px; color: var(--text-muted);">累计签到200次</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" style="flex: 1; min-width: 280px; max-width: 320px;">
+                <p class="testimonial-text">"多端同步功能解决了我的大问题，手机电脑都能用，非常方便！"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">🎯</div>
+                    <div>
+                        <strong>王先生</strong>
+                        <p style="font-size: 12px; color: var(--text-muted);">活跃用户</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-links">
+            <a href="/about">关于我们</a>
+            <a href="/terms">使用条款</a>
+            <a href="/privacy">隐私政策</a>
+            <a href="/help">帮助中心</a>
+        </div>
+        <p style="color: var(--text-muted);">
+            公安备案号：<a href="https://beian.miit.gov.cn/" style="color: var(--text-muted);">吉ICP备2026000792号-1</a>
+        </p>
+        <p style="color: var(--text-muted); margin-top: 10px;">© 2025-2026 PandaCo 熊猫科技 版权所有</p>
+    </footer>
+
+    <!-- 主题切换脚本 -->
+    <script src="themes.js"></script>
+    
+    <!-- 示例：主题变化时的回调 -->
+    <script>
+        window.addEventListener('themeChanged', (e) => {
+            console.log(`主题已切换为: ${e.detail.themeName}`);
+            
+            // 可以在这里添加主题特定的逻辑
+            if (e.detail.theme === 'cyberpunk') {
+                // 赛博朋克主题特效
+                document.body.classList.add('cyberpunk-active');
+            } else {
+                document.body.classList.remove('cyberpunk-active');
+            }
+        });
+    </script>
+</body>
+</html>

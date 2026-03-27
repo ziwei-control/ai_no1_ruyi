@@ -1,0 +1,7 @@
+tools:
+  - name: execute_shell_command
+    desc: 执行 shell 命令测试 wget_safe.sh 行为
+  - name: write_file
+    desc: 读取/写入 wrapper 脚本文件
+  - name: read_file
+    desc: 读取历史报告，诊断 wget 行为

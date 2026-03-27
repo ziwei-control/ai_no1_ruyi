@@ -1,0 +1,671 @@
+/* =====================================================
+   PandaCo 吃了么 - 四套主题系统
+   1. 随和主题 (warm) - 温暖自然
+   2. 科幻主题 (scifi) - 科技未来
+   3. 女性化主题 (feminine) - 柔美粉色
+   4. 赛博朋克主题 (cyberpunk) - 霓虹暗黑
+   ===================================================== */
+
+/* ==================== 基础样式 ==================== */
+:root {
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+/* ==================== 主题1: 随和主题 (默认) ==================== */
+[data-theme="warm"] {
+    --bg-primary: #fef9f3;
+    --bg-secondary: #fff8f0;
+    --bg-card: #ffffff;
+    --bg-nav: rgba(255, 248, 240, 0.95);
+    
+    --text-primary: #4a3728;
+    --text-secondary: #7a6555;
+    --text-muted: #9a8877;
+    
+    --accent-primary: #e07b4c;
+    --accent-secondary: #f4a261;
+    --accent-light: #ffd6b8;
+    
+    --gradient-hero: linear-gradient(135deg, #fef3e2 0%, #fdebd0 50%, #f9e4c8 100%);
+    --gradient-button: linear-gradient(135deg, #e07b4c, #f4a261);
+    --gradient-card: linear-gradient(180deg, #ffffff 0%, #fef9f3 100%);
+    
+    --shadow-soft: 0 4px 20px rgba(224, 123, 76, 0.1);
+    --shadow-card: 0 8px 30px rgba(74, 55, 40, 0.08);
+    --shadow-button: 0 4px 15px rgba(224, 123, 76, 0.3);
+    
+    --border-color: #f0e0d0;
+    --border-radius: 16px;
+    
+    --success: #6b9e6b;
+    --warning: #e6a932;
+    --error: #d4644a;
+}
+
+[data-theme="warm"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="warm"] .navbar {
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="warm"] .hero-section {
+    background: var(--gradient-hero);
+}
+
+[data-theme="warm"] .btn-primary {
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-button);
+}
+
+[data-theme="warm"] .card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="warm"] .feature-icon {
+    background: var(--accent-light);
+    color: var(--accent-primary);
+}
+
+/* ==================== 主题2: 科幻主题 ==================== */
+[data-theme="scifi"] {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1520;
+    --bg-card: rgba(15, 25, 40, 0.8);
+    --bg-nav: rgba(10, 14, 23, 0.95);
+    
+    --text-primary: #e8f0ff;
+    --text-secondary: #8b9fc7;
+    --text-muted: #5a6d8a;
+    
+    --accent-primary: #00d4ff;
+    --accent-secondary: #7c3aed;
+    --accent-light: rgba(0, 212, 255, 0.15);
+    
+    --gradient-hero: linear-gradient(135deg, #0a0e17 0%, #1a1f35 50%, #0d1a2d 100%);
+    --gradient-button: linear-gradient(135deg, #00d4ff, #7c3aed);
+    --gradient-card: linear-gradient(180deg, rgba(15, 25, 40, 0.9) 0%, rgba(10, 20, 35, 0.9) 100%);
+    
+    --shadow-soft: 0 4px 20px rgba(0, 212, 255, 0.1);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0, 212, 255, 0.1);
+    --shadow-button: 0 4px 20px rgba(0, 212, 255, 0.4);
+    
+    --border-color: rgba(0, 212, 255, 0.2);
+    --border-radius: 12px;
+    
+    --success: #00ff88;
+    --warning: #ffd000;
+    --error: #ff4757;
+}
+
+[data-theme="scifi"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="scifi"] .navbar {
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="scifi"] .hero-section {
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="scifi"] .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+[data-theme="scifi"] .btn-primary {
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-button);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+[data-theme="scifi"] .card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="scifi"] .feature-icon {
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* 网格背景 */
+[data-theme="scifi"] .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* ==================== 主题3: 女性化主题 ==================== */
+[data-theme="feminine"] {
+    --bg-primary: #fff5f8;
+    --bg-secondary: #ffeef3;
+    --bg-card: #ffffff;
+    --bg-nav: rgba(255, 245, 248, 0.95);
+    
+    --text-primary: #5c3d4e;
+    --text-secondary: #8b6075;
+    --text-muted: #b08a9a;
+    
+    --accent-primary: #ff6b9d;
+    --accent-secondary: #ff8fab;
+    --accent-light: #ffe0eb;
+    
+    --gradient-hero: linear-gradient(135deg, #fff5f8 0%, #ffeef3 50%, #ffd6e5 100%);
+    --gradient-button: linear-gradient(135deg, #ff6b9d, #ff8fab);
+    --gradient-card: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%);
+    
+    --shadow-soft: 0 4px 20px rgba(255, 107, 157, 0.1);
+    --shadow-card: 0 8px 30px rgba(92, 61, 78, 0.06);
+    --shadow-button: 0 4px 15px rgba(255, 107, 157, 0.35);
+    
+    --border-color: #ffd6e5;
+    --border-radius: 24px;
+    
+    --success: #7ec98c;
+    --warning: #ffb347;
+    --error: #ff6b6b;
+}
+
+[data-theme="feminine"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="feminine"] .navbar {
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="feminine"] .hero-section {
+    background: var(--gradient-hero);
+}
+
+[data-theme="feminine"] .btn-primary {
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-button);
+    border-radius: 50px;
+}
+
+[data-theme="feminine"] .card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+[data-theme="feminine"] .feature-icon {
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    border-radius: 50%;
+}
+
+/* 装饰性心形和花朵 */
+[data-theme="feminine"] .hero-section::before {
+    content: '🌸 💕 🌸';
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 24px;
+    opacity: 0.6;
+    letter-spacing: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ==================== 主题4: 赛博朋克主题 ==================== */
+[data-theme="cyberpunk"] {
+    --bg-primary: #0d0d0d;
+    --bg-secondary: #1a1a1a;
+    --bg-card: rgba(26, 26, 26, 0.9);
+    --bg-nav: rgba(13, 13, 13, 0.98);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #666666;
+    
+    --accent-primary: #ff00ff;
+    --accent-secondary: #00ffff;
+    --accent-third: #ffff00;
+    --accent-light: rgba(255, 0, 255, 0.1);
+    
+    --gradient-hero: linear-gradient(135deg, #0d0d0d 0%, #1a0a1a 50%, #0a1a1a 100%);
+    --gradient-button: linear-gradient(135deg, #ff00ff, #00ffff);
+    --gradient-card: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(13, 13, 13, 0.95) 100%);
+    
+    --shadow-soft: 0 4px 20px rgba(255, 0, 255, 0.2);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 0, 255, 0.5);
+    --shadow-button: 0 4px 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    
+    --border-color: rgba(255, 0, 255, 0.3);
+    --border-radius: 4px;
+    
+    --success: #00ff00;
+    --warning: #ffff00;
+    --error: #ff0044;
+}
+
+[data-theme="cyberpunk"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="cyberpunk"] .navbar {
+    background: var(--bg-nav);
+    border-bottom: 2px solid var(--accent-primary);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+[data-theme="cyberpunk"] .hero-section {
+    background: var(--gradient-hero);
+    position: relative;
+}
+
+[data-theme="cyberpunk"] .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 0, 255, 0.03) 2px,
+            rgba(255, 0, 255, 0.03) 4px
+        );
+    pointer-events: none;
+}
+
+[data-theme="cyberpunk"] .btn-primary {
+    background: var(--gradient-button);
+    box-shadow: var(--shadow-button);
+    border: 1px solid var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+[data-theme="cyberpunk"] .card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+
+[data-theme="cyberpunk"] .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+[data-theme="cyberpunk"] .feature-icon {
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-primary);
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* 霓虹闪烁动画 */
+@keyframes neon-pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px var(--accent-primary), 0 0 30px var(--accent-primary);
+    }
+    50% {
+        box-shadow: 0 0 25px var(--accent-primary), 0 0 50px var(--accent-secondary);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==================== 主题切换器样式 ==================== */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.theme-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-btn.active {
+    border-color: currentColor;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.theme-btn::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+}
+
+/* 各主题按钮颜色 */
+.theme-btn[data-theme="warm"] {
+    background: linear-gradient(135deg, #e07b4c, #f4a261);
+    color: #e07b4c;
+}
+
+.theme-btn[data-theme="scifi"] {
+    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+    color: #00d4ff;
+}
+
+.theme-btn[data-theme="feminine"] {
+    background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+    color: #ff6b9d;
+}
+
+.theme-btn[data-theme="cyberpunk"] {
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    color: #ff00ff;
+}
+
+/* 主题标签提示 */
+.theme-btn::before {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.theme-btn:hover::before {
+    opacity: 1;
+}
+
+/* ==================== 通用组件样式 ==================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all var(--transition-speed);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-primary);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-primary);
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button);
+}
+
+.btn-secondary {
+    padding: 15px 40px;
+    border: 2px solid var(--accent-primary);
+    background: transparent;
+    border-radius: var(--border-radius);
+    color: var(--accent-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-light);
+}
+
+.card {
+    padding: 30px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-section {
+    padding: 60px 40px;
+    background: var(--bg-secondary);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+}
+
+footer {
+    padding: 40px;
+    background: var(--bg-secondary);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--accent-primary);
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .theme-switcher {
+        margin-left: 10px;
+        gap: 6px;
+    }
+    
+    .theme-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        padding: 80px 20px;
+    }
+    
+    .features-grid {
+        padding: 0 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,116 @@
+{
+  "memory": {
+    "/root/.copaw/memory/2026-03-15.md": {
+      "path": "/root/.copaw/memory/2026-03-15.md",
+      "hash": "36023c0bf13160e3860a1acc4d5450c677d88e9053778952c37c44d053c5b69e",
+      "mtime_ms": 1773576099774.684,
+      "size": 1166,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2025-04-05心跳仪式报告.md": {
+      "path": "/root/.copaw/memory/2025-04-05心跳仪式报告.md",
+      "hash": "c322cba13779fed3122e684a994aae9fcea87e687277b202c2a09952bfa7528e",
+      "mtime_ms": 1773389814243.4612,
+      "size": 1344,
+      "chunk_count": 1
+    },
+    "/root/.copaw/MEMORY.md": {
+      "path": "/root/.copaw/MEMORY.md",
+      "hash": "f97a0b59aa50eebbb829d727215e4fba702bb1341d8d6cb61962835ff9760bfc",
+      "mtime_ms": 1773391012577.3948,
+      "size": 12939,
+      "chunk_count": 7
+    },
+    "/root/.copaw/memory/2025-04-05心跳探索日-完整记录.md": {
+      "path": "/root/.copaw/memory/2025-04-05心跳探索日-完整记录.md",
+      "hash": "0e68b4fb32d7429ad4670b7ef4eb346e3c402b1e0f2c96f26407f9026c7e6d46",
+      "mtime_ms": 1773397616107.5623,
+      "size": 1197,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-06.md": {
+      "path": "/root/.copaw/memory/2026-03-06.md",
+      "hash": "f0a2eebc6c72cec8283f78d2d49eaba280559e0df47f83fd0a5b1250068c58cd",
+      "mtime_ms": 1772785547144.3623,
+      "size": 8139,
+      "chunk_count": 5
+    },
+    "/root/.copaw/memory/心跳探索日·永久约定.md": {
+      "path": "/root/.copaw/memory/心跳探索日·永久约定.md",
+      "hash": "1600344425570ac3735df460074ba3fbb44578cf0fd7f0b700898b2e13cca0e6",
+      "mtime_ms": 1773405417773.3062,
+      "size": 1410,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2025-04-05心跳探索日总结.md": {
+      "path": "/root/.copaw/memory/2025-04-05心跳探索日总结.md",
+      "hash": "0a3f1cba58431b642fe7e820312a822d27ed4cff1f37905f4b2e826c59f4edad",
+      "mtime_ms": 1773396421828.631,
+      "size": 2086,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-14.md": {
+      "path": "/root/.copaw/memory/2026-03-14.md",
+      "hash": "66a5ce6d0ddf018f11c351c698c4f43a9b059b44a7ecac2e25beb117dfe673ee",
+      "mtime_ms": 1773454212325.3433,
+      "size": 3036,
+      "chunk_count": 2
+    },
+    "/root/.copaw/memory/2026-03-16.md": {
+      "path": "/root/.copaw/memory/2026-03-16.md",
+      "hash": "26058abf160f0428c721bfe8dc32282fa0ec607f2c883b1eb4fab100c10ac056",
+      "mtime_ms": 1773665262827.635,
+      "size": 133,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-05.md": {
+      "path": "/root/.copaw/memory/2026-03-05.md",
+      "hash": "e639d817e92d5d7a6d015a84fb26a247844f8209c5125c99bc8a2f0e27e6af75",
+      "mtime_ms": 1772720741578.0889,
+      "size": 8473,
+      "chunk_count": 4
+    },
+    "/root/.copaw/memory/2026-03-07.md": {
+      "path": "/root/.copaw/memory/2026-03-07.md",
+      "hash": "b0071ba5b8723056b160aaf0a42e4ac5622ed59d66d559b09de4cda45c2dcc85",
+      "mtime_ms": 1772872395224.2524,
+      "size": 2165,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-11.md": {
+      "path": "/root/.copaw/memory/2026-03-11.md",
+      "hash": "a76a6e62f64e297ad077604a2d509c4c1b4c8a7971ebaa8ff4106b39b5bbdf48",
+      "mtime_ms": 1773182068850.4988,
+      "size": 2667,
+      "chunk_count": 2
+    },
+    "/root/.copaw/memory/2025-04-05.md": {
+      "path": "/root/.copaw/memory/2025-04-05.md",
+      "hash": "10a13ba00f3fdc9f77cfdc4c80162a24b4939cb1cf888664dc22e7e34b666922",
+      "mtime_ms": 1773388613405.4963,
+      "size": 704,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2025-04-05收尾凭证.md": {
+      "path": "/root/.copaw/memory/2025-04-05收尾凭证.md",
+      "hash": "2524b2b4c464557dc2d70d12a8008f7ce23ceade8f086cb47afc489ea5c3d7e5",
+      "mtime_ms": 1773392222763.4373,
+      "size": 1102,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-17.md": {
+      "path": "/root/.copaw/memory/2026-03-17.md",
+      "hash": "2967d81264a08cf55d53a6f9da745014167df87ff7c2e3b3c2f980a3a1d82aa5",
+      "mtime_ms": 1773734625159.238,
+      "size": 325,
+      "chunk_count": 1
+    },
+    "/root/.copaw/memory/2026-03-10.md": {
+      "path": "/root/.copaw/memory/2026-03-10.md",
+      "hash": "e4ee788a098eefd60709f0c1d1eebd446efa032be7a0b928fd04277e3ef006a0",
+      "mtime_ms": 1773094608688.4404,
+      "size": 4776,
+      "chunk_count": 3
+    }
+  }
+}

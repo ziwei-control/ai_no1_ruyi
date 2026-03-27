@@ -1,0 +1,65 @@
+{
+  "chats": [
+    {
+      "channel": "console",
+      "created_at": "2026-03-22T10:20:36.360298Z",
+      "id": "b7cab9d7-1a7b-4544-9dd4-138eccddbdba",
+      "meta": {},
+      "name": "用视觉系统看到我发的",
+      "session_id": "1774174829464",
+      "updated_at": "2026-03-23T00:31:03.717858",
+      "user_id": "default"
+    },
+    {
+      "channel": "console",
+      "created_at": "2026-03-22T10:25:31.246005Z",
+      "id": "14f7c0e0-6b05-4c27-a358-cdbe0257b9ad",
+      "meta": {},
+      "name": "# HEARTBEA",
+      "session_id": "main",
+      "updated_at": "2026-03-27T08:15:48.943665",
+      "user_id": "main"
+    },
+    {
+      "channel": "console",
+      "created_at": "2026-03-21T01:16:58.786999Z",
+      "id": "5188df54-3d83-48c6-b209-ff1b77df5c91",
+      "meta": {},
+      "name": "你可以正常工作了吗",
+      "session_id": "temp-1774055807856",
+      "updated_at": "2026-03-26T07:42:03.788863",
+      "user_id": "default"
+    },
+    {
+      "channel": "console",
+      "created_at": "2026-03-24T13:38:35.361691Z",
+      "id": "f9bf9932-67ea-49e7-976a-5631d96d35be",
+      "meta": {},
+      "name": "https://pa",
+      "session_id": "1774359498993",
+      "updated_at": "2026-03-25T07:58:54.716317",
+      "user_id": "default"
+    },
+    {
+      "channel": "console",
+      "created_at": "2026-03-26T21:46:48.397711Z",
+      "id": "921665fc-6349-42f6-800c-e7fd03b33b54",
+      "meta": {},
+      "name": "https://pa",
+      "session_id": "1774561551281",
+      "updated_at": "2026-03-27T06:05:54.380705",
+      "user_id": "default"
+    },
+    {
+      "channel": "console",
+      "created_at": "2026-03-27T06:16:10.113204Z",
+      "id": "933eb0c3-6c32-4be5-b9b2-1e6bb27956df",
+      "meta": {},
+      "name": "本机gitee的to",
+      "session_id": "1774592141906",
+      "updated_at": "2026-03-27T06:53:21.503507",
+      "user_id": "default"
+    }
+  ],
+  "version": 1
+}

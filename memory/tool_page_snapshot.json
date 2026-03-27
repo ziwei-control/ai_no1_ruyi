@@ -1,0 +1,5 @@
+- document:
+  - heading "环境异常" [ref=e1] [level=2]
+  - paragraph: 当前环境异常，完成验证后即可继续访问。
+  - paragraph: 去验证
+  - iframe

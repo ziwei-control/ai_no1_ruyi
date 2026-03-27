@@ -1,0 +1,46 @@
+✅ 安全中间件已启用
+📋 黑名单 IP: 30 个
+🚫 封禁路径: 19 个
+🤖 封禁 UA: 13 个
+📅 定时任务已配置: 每天凌晨1点检查签到提醒
+🚀 服务器端口: 8080 (可通过APP_PORT环境变量修改)
+服务器已启动，监听端口 8080
+本机访问: http://localhost:8080
+局域网访问: http://10.1.0.9:8080
+ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default). This could indicate a misconfiguration which would prevent express-rate-limit from accurately identifying users. See https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/ for more information.
+    at Object.xForwardedForHeader (/root/eat/node_modules/express-rate-limit/dist/index.cjs:371:13)
+    at wrappedValidations.<computed> [as xForwardedForHeader] (/root/eat/node_modules/express-rate-limit/dist/index.cjs:685:22)
+    at Object.keyGenerator (/root/eat/node_modules/express-rate-limit/dist/index.cjs:788:20)
+    at /root/eat/node_modules/express-rate-limit/dist/index.cjs:849:32
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /root/eat/node_modules/express-rate-limit/dist/index.cjs:830:5 {
+  code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR',
+  help: 'https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/'
+}
+[2026-03-13T16:01:24.787Z] [INFO] HTTP请求 | Data: {
+  "method": "GET",
+  "url": "/",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone os 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/11D257 Safari/604.1",
+  "params": {},
+  "query": {},
+  "body": null
+}
+[2026-03-13T16:01:24.857Z] [INFO] HTTP请求 | Data: {
+  "method": "GET",
+  "url": "/",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone os 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/11D257 Safari/604.1",
+  "params": {},
+  "query": {},
+  "body": null
+}
+[2026-03-13T16:01:25.445Z] [INFO] HTTP请求 | Data: {
+  "method": "GET",
+  "url": "/",
+  "ip": "127.0.0.1",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone os 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/11D257 Safari/604.1",
+  "params": {},
+  "query": {},
+  "body": null
+}

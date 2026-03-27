@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaCo 主题系统 - 四套主题预览</title>
+    <link rel="stylesheet" href="themes.css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        
+        .preview-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-header p {
+            color: #888;
+            font-size: 1.2rem;
+        }
+        
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 900px) {
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .theme-preview {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .theme-preview:hover {
+            transform: translateY(-10px);
+        }
+        
+        .theme-header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .theme-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .theme-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .theme-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        .preview-frame {
+            height: 350px;
+            border-radius: 0 0 20px 20px;
+            overflow: hidden;
+        }
+        
+        .preview-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 各主题头部样式 */
+        .theme-warm .theme-header {
+            background: linear-gradient(135deg, #fef3e2, #fdebd0);
+            color: #4a3728;
+        }
+        
+        .theme-warm .theme-badge {
+            background: #e07b4c;
+            color: white;
+        }
+        
+        .theme-scifi .theme-header {
+            background: linear-gradient(135deg, #0a0e17, #1a1f35);
+            color: #e8f0ff;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        .theme-scifi .theme-badge {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: white;
+        }
+        
+        .theme-feminine .theme-header {
+            background: linear-gradient(135deg, #fff5f8, #ffd6e5);
+            color: #5c3d4e;
+        }
+        
+        .theme-feminine .theme-badge {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            color: white;
+        }
+        
+        .theme-cyberpunk .theme-header {
+            background: linear-gradient(135deg, #0d0d0d, #1a0a1a);
+            color: #fff;
+            border-bottom: 2px solid #ff00ff;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+        
+        .theme-cyberpunk .theme-badge {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* 功能说明 */
+        .features-section {
+            background: #16213e;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .features-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-item h4 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        .feature-item p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* 使用说明 */
+        .usage-section {
+            background: #16213e;
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .usage-section h2 {
+            margin-bottom: 30px;
+        }
+        
+        .code-block {
+            background: #0d0d0d;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            color: #00ff88;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .code-comment {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <header class="page-header">
+            <h1>🎨 PandaCo 主题系统</h1>
+            <p>四套精心设计的主题，一键切换，满足不同用户偏好</p>
+        </header>
+        
+        <div class="themes-grid">
+            <!-- 主题1: 随和 -->
+            <div class="theme-preview theme-warm">
+                <div class="theme-header">
+                    <div class="theme-info">
+                        <h3>🌅 随和主题</h3>
+                        <p>温暖自然，舒适放松</p>
+                    </div>
+                    <span class="theme-badge">默认</span>
+                </div>
+                <div class="preview-frame" style="background: var(--bg-primary);">
+                    <div style="padding: 30px; background: linear-gradient(135deg, #fef3e2, #fdebd0); height: 100%;">
+                        <h2 style="color: #4a3728; margin-bottom: 15px;">让签到变得 简单有趣</h2>
+                        <p style="color: #7a6555; margin-bottom: 20px;">智能签到管理系统，记录每一天的健康生活</p>
+                        <button style="background: linear-gradient(135deg, #e07b4c, #f4a261); color: white; padding: 12px 30px; border: none; border-radius: 16px; cursor: pointer;">立即开始</button>
+                        <div style="margin-top: 30px; display: flex; gap: 15px;">
+                            <div style="background: white; padding: 15px; border-radius: 16px; flex: 1; box-shadow: 0 4px 15px rgba(74,55,40,0.1);">
+                                <div style="font-size: 24px; margin-bottom: 5px;">📅</div>
+                                <strong style="color: #4a3728;">每日签到</strong>
+                            </div>
+                            <div style="background: white; padding: 15px; border-radius: 16px; flex: 1; box-shadow: 0 4px 15px rgba(74,55,40,0.1);">
+                                <div style="font-size: 24px; margin-bottom: 5px;">📊</div>
+                                <strong style="color: #4a3728;">数据统计</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主题2: 科幻 -->
+            <div class="theme-preview theme-scifi">
+                <div class="theme-header">
+                    <div class="theme-info">
+                        <h3>🚀 科幻主题</h3>
+                        <p>科技未来，酷炫深邃</p>
+                    </div>
+                    <span class="theme-badge">深色</span>
+                </div>
+                <div class="preview-frame" style="background: #0a0e17;">
+                    <div style="padding: 30px; background: linear-gradient(135deg, #0a0e17, #1a1f35); height: 100%; position: relative;">
+                        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(0,212,255,0.1), transparent 50%);"></div>
+                        <h2 style="color: #00d4ff; margin-bottom: 15px; position: relative;">让签到变得 简单有趣</h2>
+                        <p style="color: #8b9fc7; margin-bottom: 20px; position: relative;">智能签到管理系统，记录每一天的健康生活</p>
+                        <button style="background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; padding: 12px 30px; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 0 20px rgba(0,212,255,0.4);">立即开始</button>
+                        <div style="margin-top: 30px; display: flex; gap: 15px; position: relative;">
+                            <div style="background: rgba(15,25,40,0.8); padding: 15px; border-radius: 12px; flex: 1; border: 1px solid rgba(0,212,255,0.2); backdrop-filter: blur(10px);">
+                                <div style="font-size: 24px; margin-bottom: 5px; filter: drop-shadow(0 0 10px #00d4ff);">📅</div>
+                                <strong style="color: #e8f0ff;">每日签到</strong>
+                            </div>
+                            <div style="background: rgba(15,25,40,0.8); padding: 15px; border-radius: 12px; flex: 1; border: 1px solid rgba(0,212,255,0.2); backdrop-filter: blur(10px);">
+                                <div style="font-size: 24px; margin-bottom: 5px; filter: drop-shadow(0 0 10px #00d4ff);">📊</div>
+                                <strong style="color: #e8f0ff;">数据统计</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主题3: 女性化 -->
+            <div class="theme-preview theme-feminine">
+                <div class="theme-header">
+                    <div class="theme-info">
+                        <h3>🌸 柔美主题</h3>
+                        <p>温馨可爱，粉色浪漫</p>
+                    </div>
+                    <span class="theme-badge">粉色</span>
+                </div>
+                <div class="preview-frame" style="background: #fff5f8;">
+                    <div style="padding: 30px; background: linear-gradient(135deg, #fff5f8, #ffd6e5); height: 100%; position: relative;">
+                        <div style="position: absolute; top: 10px; right: 20px; font-size: 20px; opacity: 0.6;">🌸 💕 🌸</div>
+                        <h2 style="color: #5c3d4e; margin-bottom: 15px;">让签到变得 简单有趣</h2>
+                        <p style="color: #8b6075; margin-bottom: 20px;">智能签到管理系统，记录每一天的健康生活</p>
+                        <button style="background: linear-gradient(135deg, #ff6b9d, #ff8fab); color: white; padding: 12px 30px; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(255,107,157,0.35);">立即开始</button>
+                        <div style="margin-top: 30px; display: flex; gap: 15px;">
+                            <div style="background: white; padding: 15px; border-radius: 20px; flex: 1; border: 1px solid #ffd6e5;">
+                                <div style="font-size: 24px; margin-bottom: 5px; background: #ffe0eb; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">📅</div>
+                                <strong style="color: #5c3d4e;">每日签到</strong>
+                            </div>
+                            <div style="background: white; padding: 15px; border-radius: 20px; flex: 1; border: 1px solid #ffd6e5;">
+                                <div style="font-size: 24px; margin-bottom: 5px; background: #ffe0eb; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">📊</div>
+                                <strong style="color: #5c3d4e;">数据统计</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主题4: 赛博朋克 -->
+            <div class="theme-preview theme-cyberpunk">
+                <div class="theme-header">
+                    <div class="theme-info">
+                        <h3>⚡ 赛博朋克</h3>
+                        <p>霓虹暗黑，朋克炫酷</p>
+                    </div>
+                    <span class="theme-badge">CYBER</span>
+                </div>
+                <div class="preview-frame" style="background: #0d0d0d;">
+                    <div style="padding: 30px; background: linear-gradient(135deg, #0d0d0d, #1a0a1a); height: 100%; position: relative; overflow: hidden;">
+                        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,0,255,0.03) 2px, rgba(255,0,255,0.03) 4px);"></div>
+                        <h2 style="color: #fff; margin-bottom: 15px; position: relative; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;">让签到变得 简单有趣</h2>
+                        <p style="color: #b0b0b0; margin-bottom: 20px; position: relative;">智能签到管理系统，记录每一天的健康生活</p>
+                        <button style="background: linear-gradient(135deg, #ff00ff, #00ffff); color: white; padding: 12px 30px; border: 1px solid #ff00ff; border-radius: 4px; cursor: pointer; box-shadow: 0 0 20px #ff00ff; clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">立即开始</button>
+                        <div style="margin-top: 30px; display: flex; gap: 15px; position: relative;">
+                            <div style="background: rgba(26,26,26,0.9); padding: 15px; flex: 1; border: 1px solid rgba(255,0,255,0.3); position: relative;">
+                                <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #ff00ff, #00ffff);"></div>
+                                <div style="font-size: 24px; margin-bottom: 5px; filter: drop-shadow(0 0 10px #ff00ff);">📅</div>
+                                <strong style="color: #fff;">每日签到</strong>
+                            </div>
+                            <div style="background: rgba(26,26,26,0.9); padding: 15px; flex: 1; border: 1px solid rgba(255,0,255,0.3); position: relative;">
+                                <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #ff00ff, #00ffff);"></div>
+                                <div style="font-size: 24px; margin-bottom: 5px; filter: drop-shadow(0 0 10px #00ffff);">📊</div>
+                                <strong style="color: #fff;">数据统计</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 功能说明 -->
+        <section class="features-section">
+            <h2>✨ 主题系统特性</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>🎨 一键切换</h4>
+                    <p>点击导航栏的主题按钮，即可实时切换主题，无需刷新页面</p>
+                </div>
+                <div class="feature-item">
+                    <h4>💾 智能记忆</h4>
+                    <p>自动保存用户主题偏好，下次访问自动应用</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🌙 深浅适配</h4>
+                    <p>随和/柔美为浅色主题，科幻/赛博朋克为深色主题</p>
+                </div>
+                <div class="feature-item">
+                    <h4>⚡ 动态特效</h4>
+                    <p>赛博朋克主题带霓虹闪烁、故障艺术等特效</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📱 响应式设计</h4>
+                    <p>所有主题均支持移动端适配</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🔧 易于扩展</h4>
+                    <p>基于 CSS 变量设计，可轻松添加新主题</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 使用说明 -->
+        <section class="usage-section">
+            <h2>📝 使用方法</h2>
+            
+            <h4 style="color: #00d4ff; margin-top: 20px;">1. 引入文件</h4>
+            <div class="code-block">
+                <code>
+<span class="code-comment">&lt;!-- CSS 样式 --&gt;</span><br>
+&lt;link rel="stylesheet" href="themes.css"&gt;<br><br>
+<span class="code-comment">&lt;!-- JavaScript 脚本 --&gt;</span><br>
+&lt;script src="themes.js"&gt;&lt;/script&gt;
+                </code>
+            </div>
+            
+            <h4 style="color: #00d4ff; margin-top: 20px;">2. HTML 结构</h4>
+            <div class="code-block">
+                <code>
+&lt;html lang="zh-CN" <span style="color: #ff00ff;">data-theme="warm"</span>&gt;<br>
+  &lt;!-- 页面内容 --&gt;<br>
+&lt;/html&gt;
+                </code>
+            </div>
+            
+            <h4 style="color: #00d4ff; margin-top: 20px;">3. 主题切换按钮会自动插入到导航栏</h4>
+            <div class="code-block">
+                <code>
+<span class="code-comment">// 切换主题</span><br>
+themeManager.switchTheme('scifi');  <span class="code-comment">// 切换到科幻主题</span><br><br>
+<span class="code-comment">// 获取当前主题</span><br>
+const currentTheme = themeManager.getTheme();  <span class="code-comment">// 'warm', 'scifi', 'feminine', 'cyberpunk'</span>
+                </code>
+            </div>
+        </section>
+        
+        <footer style="text-align: center; padding: 40px; color: #666;">
+            <p>© 2025-2026 PandaCo 熊猫科技 | 四套主题系统</p>
+        </footer>
+    </div>
+</body>
+</html>

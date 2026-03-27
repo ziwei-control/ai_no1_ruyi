@@ -1,0 +1,25 @@
+/root/.copaw/venv/lib/python3.12/site-packages/uvicorn/protocols/websockets/websockets_impl.py:17: DeprecationWarning: websockets.server.WebSocketServerProtocol is deprecated
+  from websockets.server import WebSocketServerProtocol
+[NacosRegistry] Nacos SDK (nacos-sdk-python) is not available. Install it with: pip install nacos-sdk-python
+INFO venv/lib/python3.12/site-packages/copaw/app/_app.py:197 | 2026-03-13 07:58:41 | STATIC_DIR: /root/.copaw/venv/lib/python3.12/site-packages/copaw/console
+INFO:     Started server process [1884]
+INFO:     Waiting for application startup.
+WARNING venv/lib/python3.12/site-packages/copaw/agents/memory/memory_manager.py:484 | 2026-03-13 07:58:41 | Vector search disabled. Memory search functionality will be restricted. To enable, configure: EMBEDDING_API_KEY, EMBEDDING_BASE_URL, EMBEDDING_MODEL_NAME, and EMBEDDING_DIMENSIONS.
+2026-03-13 07:58:41.411 | INFO     | reme.core.service_context:__init__:87 - update with args: ['config=file'] kwargs: {'embedding_models': {'default': {'model_name': 'text-embedding-v4', 'dimensions': 1024, 'enable_cache': True, 'max_cache_size': 2000, 'max_input_length': 8192, 'max_batch_size': 10}}, 'file_stores': {'default': {'backend': 'chroma', 'store_name': 'copaw', 'vector_enabled': False, 'fts_enabled': True}}, 'file_watchers': {'default': {'watch_paths': ['/root/.copaw/MEMORY.md', '/root/.copaw/memory.md', '/root/.copaw/memory']}}, 'enable_logo': False, 'log_to_console': False, 'working_dir': '/root/.copaw'}
+2026-03-13 07:58:41.411 | INFO     | reme.core.utils.pydantic_config_parser:_find_config_path:138 - load config=/root/.copaw/venv/lib/python3.12/site-packages/reme/config/file.yaml
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/telegram/channel.py:247 | 2026-03-13 07:58:45 | telegram: channel initialized (polling will start)
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/dingtalk/channel.py:1412 | 2026-03-13 07:58:45 | dingtalk stream thread started (client_id=ding2qkgr90jmj2bbvkt)
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/telegram/channel.py:596 | 2026-03-13 07:58:45 | telegram: channel started (polling task created)
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/console/channel.py:313 | 2026-03-13 07:58:45 | Console channel started
+2026-03-13 07:58:45,817 dingtalk_stream.client INFO     open connection, url=https://api.dingtalk.com/v1.0/gateway/connections/open [stream.py:149]
+INFO venv/lib/python3.12/site-packages/copaw/config/watcher.py:58 | 2026-03-13 07:58:45 | ConfigWatcher started (poll=2.0s, path=/root/.copaw/config.json)
+2026-03-13 07:58:46,040 dingtalk_stream.client INFO     endpoint is {'endpoint': 'wss://wss-open-connection-union.dingtalk.com:443/connect', 'ticket': '67f86c38-1e6f-11f1-b05d-329bedae46d2'} [stream.py:71]
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 8088): address already in use
+INFO:     Waiting for application shutdown.
+INFO venv/lib/python3.12/site-packages/copaw/config/watcher.py:72 | 2026-03-13 07:58:46 | ConfigWatcher stopped
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/console/channel.py:318 | 2026-03-13 07:58:46 | console channel stopped
+2026-03-13 07:58:46,658 dingtalk_stream.client INFO     open connection, url=https://api.dingtalk.com/v1.0/gateway/connections/open [stream.py:149]
+2026-03-13 07:58:47,115 dingtalk_stream.client INFO     endpoint is {'endpoint': 'wss://wss-open-connection-union.dingtalk.com:443/connect', 'ticket': '6871ae01-1e6f-11f1-89fb-2eaa794b294e'} [stream.py:71]
+2026-03-13 07:58:47,359 dingtalk_stream.client ERROR    [start] network exception, error= [stream.py:84]
+INFO:     Application shutdown complete.

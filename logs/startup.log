@@ -1,0 +1,16 @@
+/root/.copaw/venv/lib/python3.12/site-packages/uvicorn/protocols/websockets/websockets_impl.py:17: DeprecationWarning: websockets.server.WebSocketServerProtocol is deprecated
+  from websockets.server import WebSocketServerProtocol
+[NacosRegistry] Nacos SDK (nacos-sdk-python) is not available. Install it with: pip install nacos-sdk-python
+INFO venv/lib/python3.12/site-packages/copaw/app/_app.py:197 | 2026-03-13 12:30:14 | STATIC_DIR: /root/.copaw/venv/lib/python3.12/site-packages/copaw/console
+INFO:     Started server process [18608]
+INFO:     Waiting for application startup.
+WARNING venv/lib/python3.12/site-packages/copaw/agents/memory/memory_manager.py:484 | 2026-03-13 12:30:14 | Vector search disabled. Memory search functionality will be restricted. To enable, configure: EMBEDDING_API_KEY, EMBEDDING_BASE_URL, EMBEDDING_MODEL_NAME, and EMBEDDING_DIMENSIONS.
+2026-03-13 12:30:14.936 | INFO     | reme.core.service_context:__init__:87 - update with args: ['config=file'] kwargs: {'embedding_models': {'default': {'model_name': 'text-embedding-v4', 'dimensions': 1024, 'enable_cache': True, 'max_cache_size': 2000, 'max_input_length': 8192, 'max_batch_size': 10}}, 'file_stores': {'default': {'backend': 'chroma', 'store_name': 'copaw', 'vector_enabled': False, 'fts_enabled': True}}, 'file_watchers': {'default': {'watch_paths': ['/root/.copaw/MEMORY.md', '/root/.copaw/memory.md', '/root/.copaw/memory']}}, 'enable_logo': False, 'log_to_console': False, 'working_dir': '/root/.copaw'}
+2026-03-13 12:30:14.937 | INFO     | reme.core.utils.pydantic_config_parser:_find_config_path:138 - load config=/root/.copaw/venv/lib/python3.12/site-packages/reme/config/file.yaml
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/telegram/channel.py:247 | 2026-03-13 12:30:17 | telegram: channel initialized (polling will start)
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/dingtalk/channel.py:1412 | 2026-03-13 12:30:17 | dingtalk stream thread started (client_id=ding2qkgr90jmj2bbvkt)
+2026-03-13 12:30:17,723 dingtalk_stream.client INFO     open connection, url=https://api.dingtalk.com/v1.0/gateway/connections/open [stream.py:149]
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/telegram/channel.py:596 | 2026-03-13 12:30:17 | telegram: channel started (polling task created)
+INFO venv/lib/python3.12/site-packages/copaw/app/channels/console/channel.py:313 | 2026-03-13 12:30:17 | Console channel started
+INFO venv/lib/python3.12/site-packages/copaw/config/watcher.py:58 | 2026-03-13 12:30:17 | ConfigWatcher started (poll=2.0s, path=/root/.copaw/config.json)
+2026-03-13 12:30:18,172 dingtalk_stream.client INFO     endpoint is {'endpoint': 'wss://wss-open-connection-union.dingtalk.com:443/connect', 'ticket': '56d6e57f-1e95-11f1-b05d-329bedae46d2'} [stream.py:71]

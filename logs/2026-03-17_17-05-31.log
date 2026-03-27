@@ -1,0 +1,4 @@
+2026-03-27 08:15:32 | INFO | base_op.py:257 | FbCompactor.call | ========== cost=0.004750s ==========
+2026-03-27 08:15:32 | INFO | base_op.py:257 | FbSummarizer.call | ========== cost=0.009211s ==========
+2026-03-27 11:14:16 | INFO | base_op.py:257 | FbCompactor.call | ========== cost=0.021474s ==========
+2026-03-27 11:14:18 | INFO | base_op.py:257 | FbSummarizer.call | ========== cost=0.025223s ==========

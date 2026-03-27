@@ -1,0 +1,14 @@
+tools:
+  - name: execute_shell_command
+    desc: 执行 shell 命令并捕获 stdout/stderr，用于真实工具测试
+    notes: "务必配合 timeout 和 exit code 检查"
+  - name: read_file
+    desc: 读取历史报告、日志、测试快照，用于诊断
+  - name: write_file
+    desc: 写入测试报告、新 skill 文件
+  - name: edit_file
+    desc: 追加 memory / MEMORY.md，保持上下文
+  - name: memory_search
+    desc: 检索过往失败 case，避免重复
+  - name: get_current_time
+    desc: 生成时间戳（用于报告命名）

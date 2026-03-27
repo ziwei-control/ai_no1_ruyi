@@ -1,0 +1,9 @@
+tools:
+  - name: execute_shell_command
+    desc: 执行 shell 命令，支持 timeout 参数（单次超时控制）
+  - name: get_current_time
+    desc: 获取当前时间，用于记录轮次和划分超时窗口
+  - name: write_file
+    desc: 写入多轮测试报告（每轮结果 + 收敛分析）
+  - name: read_file
+    desc: 读取历史报告，支持收敛分析（对比多轮结果）
